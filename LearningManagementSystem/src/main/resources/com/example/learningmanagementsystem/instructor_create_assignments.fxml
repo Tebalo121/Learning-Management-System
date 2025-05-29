@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.learningmanagementsystem.InstructorCreateAssignmentsController"
+            prefHeight="600" prefWidth="700">
+
+    <children>
+        <ComboBox fx:id="courseComboBox" layoutX="50" layoutY="20" prefWidth="400" promptText="Select Course"/>
+        <TextField fx:id="assignmentTitleField" promptText="Assignment Title" layoutX="50" layoutY="60" />
+        <TextArea fx:id="assignmentDescriptionField" promptText="Assignment Description" layoutX="50" layoutY="100" prefHeight="100" prefWidth="600" />
+        <DatePicker fx:id="dueDatePicker" layoutX="50" layoutY="210" />
+
+        <Button text="Create Assignment" layoutX="50" layoutY="250" onAction="#handleCreateAssignment" />
+        <Button text="Cancel" layoutX="170" layoutY="250" onAction="#handleCancel" />
+        <Button text="Back" layoutX="270" layoutY="250" onAction="#handleBack" />
+
+        <TableView fx:id="assignmentTable" layoutX="50" layoutY="300" prefWidth="600" prefHeight="200">
+            <columns>
+                <TableColumn fx:id="courseCol" text="Course"/>
+                <TableColumn fx:id="titleCol" text="Title"/>
+                <TableColumn fx:id="dueDateCol" text="Due Date"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

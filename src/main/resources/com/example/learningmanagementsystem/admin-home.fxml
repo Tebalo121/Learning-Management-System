@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.learningmanagementsystem.AdminHomeController">
+
+    <top>
+        <ToolBar>
+            <Label fx:id="welcomeLabel" text="Welcome Admin" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Button text="Logout" onAction="#handleLogout" />
+        </ToolBar>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="15" style="-fx-padding: 30;">
+            <Label text="Admin Dashboard" style="-fx-font-size: 22;" />
+            <Button text="Manage Users" onAction="#handleManageUsers" />
+            <Button text="View All Courses" onAction="#handleViewCourses" />
+            <Button text="Generate Reports" onAction="#handleViewReports" />
+            <Button text="Manage Announcements" onAction="#handleAnnouncements"/>
+            <Button text="Backup Database" onAction="#handleBackup"/>
+            <Button text="Manage Feedback" onAction="#handleFeedback"/>
+        </VBox>
+    </center>
+</BorderPane>

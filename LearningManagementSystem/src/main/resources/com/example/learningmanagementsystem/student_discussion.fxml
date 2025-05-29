@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.learningmanagementsystem.StudentDiscussionController" spacing="10" alignment="CENTER" prefWidth="600">
+    <Label text="Discussion Topics" style="-fx-font-size: 18; -fx-font-weight: bold;" />
+    <TableView fx:id="topicsTable" prefHeight="200">
+        <columns>
+            <TableColumn fx:id="titleColumn" text="Title" prefWidth="150" />
+            <TableColumn fx:id="descriptionColumn" text="Description" prefWidth="250" />
+            <TableColumn fx:id="createdAtColumn" text="Created At" prefWidth="150" />
+        </columns>
+    </TableView>
+    <Label text="Submit Reply" style="-fx-font-size: 14; -fx-font-weight: bold;" />
+    <TextArea fx:id="replyField" promptText="Enter your reply here" prefHeight="100" prefWidth="400" />
+    <Button fx:id="submitReplyButton" text="Submit Reply" onAction="#handleSubmitReply" />
+    <Button fx:id="backButton" text="Back to Home" onAction="#handleBack" />
+</VBox>

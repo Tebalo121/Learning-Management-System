@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.learningmanagementsystem.StudentGradesController">
+
+    <top>
+        <ToolBar>
+            <Label fx:id="welcomeLabel" text="My Grades" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="Back" onAction="#handleBack"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <TableView fx:id="gradesTable" prefWidth="600">
+            <columns>
+                <TableColumn fx:id="colCourse" text="Course" prefWidth="200"/>
+                <TableColumn fx:id="colAssignment" text="Assignment" prefWidth="200"/>
+                <TableColumn fx:id="colGrade" text="Grade" prefWidth="100"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

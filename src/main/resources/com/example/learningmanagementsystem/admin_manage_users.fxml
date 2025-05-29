@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.learningmanagementsystem.AdminManageUsersController">
+
+    <top>
+        <VBox spacing="5">
+            <MenuBar>
+                <Menu text="File">
+                    <MenuItem text="Exit" onAction="#handleExit"/>
+                </Menu>
+                <Menu text="Help">
+                    <MenuItem text="About" onAction="#handleAbout"/>
+                </Menu>
+            </MenuBar>
+
+            <Label text="Manage Users" style="-fx-font-size: 20; -fx-padding: 10 0 0 10;" />
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
+            <ScrollPane fitToWidth="true">
+                <content>
+                    <TableView fx:id="userTable" prefHeight="300">
+                        <columns>
+                            <TableColumn fx:id="idColumn" text="ID" />
+                            <TableColumn fx:id="usernameColumn" text="Username" />
+                            <TableColumn fx:id="fullNameColumn" text="Full Name" />
+                            <TableColumn fx:id="roleColumn" text="Role" />
+                        </columns>
+                    </TableView>
+                </content>
+            </ScrollPane>
+
+            <HBox spacing="10">
+                <TextField fx:id="usernameField" promptText="Username" />
+                <TextField fx:id="fullNameField" promptText="Full Name" />
+                <TextField fx:id="roleField" promptText="Role (e.g., admin, instructor, student)" />
+            </HBox>
+
+            <HBox spacing="10">
+                <Button text="Add User" onAction="#handleAddUser" />
+                <Button text="Update User" onAction="#handleUpdateUser" />
+                <Button text="Delete User" onAction="#handleDeleteUser" />
+            </HBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <Pagination fx:id="pagination" pageCount="5" />
+    </bottom>
+</BorderPane>

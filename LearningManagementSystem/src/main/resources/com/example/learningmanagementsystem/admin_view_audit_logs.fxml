@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.learningmanagementsystem.AdminViewAuditLogsController"
+      spacing="10" alignment="CENTER" style="-fx-padding: 20; -fx-background-color: #f4f4f4;">
+    <Label fx:id="welcomeLabel" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+    <HBox spacing="10">
+        <TextField fx:id="filterField" promptText="Filter by username, action, or details" prefWidth="300" />
+        <DatePicker fx:id="dateFilter" promptText="Filter by date" />
+    </HBox>
+    <TableView fx:id="auditLogTable">
+        <columns>
+            <TableColumn fx:id="timestampColumn" text="Timestamp" prefWidth="200" />
+            <TableColumn fx:id="usernameColumn" text="Username" prefWidth="150" />
+            <TableColumn fx:id="actionColumn" text="Action" prefWidth="150" />
+            <TableColumn fx:id="detailsColumn" text="Details" prefWidth="300" />
+        </columns>
+    </TableView>
+    <Pagination fx:id="pagination" />
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="refreshButton" text="Refresh" onAction="#handleRefresh" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" />
+        <Button fx:id="exportButton" text="Export to CSV" onAction="#handleExport" style="-fx-background-color: #FFC107; -fx-text-fill: black;" />
+        <Button fx:id="backButton" text="Back to Dashboard" onAction="#handleBack" style="-fx-background-color: #2196F3; -fx-text-fill: white;" />
+    </HBox>
+</VBox>

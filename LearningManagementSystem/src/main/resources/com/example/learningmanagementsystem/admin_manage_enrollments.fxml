@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:controller="com.example.learningmanagementsystem.AdminManageEnrollmentsController"
+      xmlns:fx="http://javafx.com/fxml" spacing="10" alignment="TOP_CENTER" style="-fx-background-color: #f4f4f4;">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    <Label fx:id="welcomeLabel" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Manage Enrollments"/>
+    <TableView fx:id="enrollmentsTable" prefHeight="400">
+        <columns>
+            <TableColumn fx:id="enrollmentIdColumn" text="Enrollment ID" prefWidth="100"/>
+            <TableColumn fx:id="studentColumn" text="Student" prefWidth="150"/>
+            <TableColumn fx:id="courseColumn" text="Course" prefWidth="150"/>
+            <TableColumn fx:id="test1Column" text="Test 1" prefWidth="80"/>
+            <TableColumn fx:id="midtermColumn" text="Midterm" prefWidth="80"/>
+            <TableColumn fx:id="testAssignmentColumn" text="Test/Assignment" prefWidth="80"/>
+            <TableColumn fx:id="finalExamColumn" text="Final Exam" prefWidth="80"/>
+            <TableColumn fx:id="progressColumn" text="Progress (%)" prefWidth="80"/>
+            <TableColumn fx:id="statusColumn" text="Status" prefWidth="80"/>
+        </columns>
+    </TableView>
+    <HBox spacing="10" alignment="CENTER">
+        <VBox spacing="5">
+            <Label text="Student:"/>
+            <ComboBox fx:id="studentComboBox" promptText="Select Student" prefWidth="150"/>
+        </VBox>
+        <VBox spacing="5">
+            <Label text="Course:"/>
+            <ComboBox fx:id="courseComboBox" promptText="Select Course" prefWidth="150"/>
+        </VBox>
+        <VBox spacing="5">
+            <Label text="Test 1:"/>
+            <TextField fx:id="test1Field" promptText="0-100"/>
+        </VBox>
+        <VBox spacing="5">
+            <Label text="Midterm:"/>
+            <TextField fx:id="midtermField" promptText="0-100"/>
+        </VBox>
+        <VBox spacing="5">
+            <Label text="Test/Assignment:"/>
+            <TextField fx:id="testAssignmentField" promptText="0-100"/>
+        </VBox>
+        <VBox spacing="5">
+            <Label text="Final Exam:"/>
+            <TextField fx:id="finalExamField" promptText="0-100"/>
+        </VBox>
+    </HBox>
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="addButton" text="Add Enrollment" onAction="#handleAddEnrollment"/>
+        <Button fx:id="updateButton" text="Update Enrollment" onAction="#handleUpdateEnrollment"/>
+        <Button fx:id="deleteButton" text="Delete Enrollment" onAction="#handleDeleteEnrollment"/>
+        <Button fx:id="backButton" text="Back to Dashboard" onAction="#handleBack"/>
+    </HBox>
+</VBox>

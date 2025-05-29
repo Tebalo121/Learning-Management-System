@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="400.0" prefWidth="312.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.learningmanagementsystem.StudentHomeController">
+    <top>
+        <ToolBar>
+            <Label fx:id="welcomeLabel" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Welcome Student" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Button onAction="#handleLogout" text="Logout" />
+        </ToolBar>
+    </top>
+    <center>
+        <VBox alignment="CENTER" prefWidth="210.0" spacing="20">
+            <Label style="-fx-font-size: 22;" text="Student Dashboard" />
+            <Button onAction="#handleViewCourses" text="View My Courses" />
+            <Button onAction="#handleViewAssignments" text="View Assignments" />
+            <Button onAction="#handleViewGrades" text="View Grades" />
+            <Button onAction="#handleTrackProgress" text="Track Progress" />
+            <Button onAction="#handleViewSurveys" text="View Surveys" />
+            <Button onAction="#handleViewDiscussion" text="View Discussion" />
+        </VBox>
+    </center>
+</BorderPane>

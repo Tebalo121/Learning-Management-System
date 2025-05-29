@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.learningmanagementsystem.StudentProgressController">
+
+    <top>
+        <ToolBar>
+            <Label fx:id="welcomeLabel" text="Track Progress" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="Back" onAction="#handleBack"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="15">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Label text="Overall Progress:" style="-fx-font-size: 16px;" />
+            <ProgressBar fx:id="overallProgressBar" prefWidth="300"/>
+            <Label fx:id="progressPercentageLabel" text="Overall: 0%" style="-fx-font-size: 14px;" />
+
+            <Separator/>
+
+            <Label text="Per Course Progress:" style="-fx-font-size: 16px;" />
+            <ListView fx:id="courseProgressList" prefHeight="200" prefWidth="350"/>
+        </VBox>
+    </center>
+</BorderPane>

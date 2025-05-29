@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.learningmanagementsystem.StudentHomeController">
+
+    <top>
+        <ToolBar>
+            <Label fx:id="welcomeLabel" text="Welcome Student" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="Logout" onAction="#handleLogout"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <Label text="Student Dashboard" style="-fx-font-size: 22;" />
+            <Button text="View My Courses" onAction="#handleViewCourses"/>
+            <Button text="View Assignments" onAction="#handleViewAssignments"/>
+            <Button text="View Grades" onAction="#handleViewGrades"/>
+            <Button text="Track Progress" onAction="#handleTrackProgress"/>
+        </VBox>
+    </center>
+</BorderPane>

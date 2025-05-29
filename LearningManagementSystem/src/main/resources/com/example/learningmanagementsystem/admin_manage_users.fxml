@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="580.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.learningmanagementsystem.AdminManageUsersController">
+
+    <top>
+        <VBox spacing="5">
+            <MenuBar>
+                <Menu text="File">
+                    <MenuItem onAction="#handleExit" text="Exit" />
+                </Menu>
+                <Menu text="Help">
+                    <MenuItem onAction="#handleAbout" text="About" />
+                </Menu>
+            </MenuBar>
+
+            <Label style="-fx-font-size: 20; -fx-padding: 10 0 0 10;" text="Manage Users" />
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets bottom="15" left="15" right="15" top="15" />
+            </padding>
+
+            <ScrollPane fitToWidth="true">
+                <content>
+                    <TableView fx:id="userTable" prefHeight="300">
+                        <columns>
+                            <TableColumn fx:id="idColumn" text="ID" />
+                            <TableColumn fx:id="usernameColumn" text="Username" />
+                            <TableColumn fx:id="fullNameColumn" text="Full Name" />
+                            <TableColumn fx:id="roleColumn" text="Role" />
+                        </columns>
+                    </TableView>
+                </content>
+            </ScrollPane>
+
+            <HBox spacing="10">
+                <TextField fx:id="usernameField" promptText="Username" />
+                <TextField fx:id="fullNameField" promptText="Full Name" />
+                <TextField fx:id="roleField" promptText="Role (e.g., admin, instructor, student)" />
+            </HBox>
+
+            <HBox spacing="10">
+                <Button onAction="#handleAddUser" text="Add User" />
+                <Button onAction="#handleUpdateUser" text="Update User" />
+                <Button onAction="#handleDeleteUser" text="Delete User" />
+                <Button fx:id="backButton" onAction="#handleBack" text="Back" />
+            </HBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <Pagination fx:id="pagination" pageCount="5" prefHeight="62.0" prefWidth="686.0" />
+    </bottom>
+</BorderPane>

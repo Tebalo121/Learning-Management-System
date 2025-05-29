@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="1319.0" prefWidth="842.0" spacing="15" style="-fx-padding: 20;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.learningmanagementsystem.InstructorConductSurveysController">
+    <Label style="-fx-font-size: 18; -fx-font-weight: bold;" text="Instructor Survey Dashboard" />
+    <!-- Survey Creation -->
+    <VBox spacing="10">
+        <TextField fx:id="surveyTitleField" promptText="Survey Title" />
+        <TextArea fx:id="surveyDescriptionField" promptText="Survey Question (Open-Ended)" wrapText="true" />
+        <CheckBox fx:id="anonymousCheckBox" selected="true" text="Anonymous Responses" />
+        <DatePicker fx:id="deadlinePicker" promptText="Select Deadline" />
+        <Button fx:id="createSurveyButton" onAction="#handleCreateSurvey" text="Create Survey" />
+    </VBox>
+    <!-- Survey List and Responses -->
+    <TableView fx:id="surveyTable">
+        <columns>
+            <TableColumn fx:id="titleColumn" prefWidth="200" text="Title" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="300" text="Question" />
+            <TableColumn fx:id="createdAtColumn" prefWidth="150" text="Created At" />
+            <TableColumn fx:id="responseCountColumn" prefWidth="100" text="Responses" />
+        </columns>
+    </TableView>
+    <Button fx:id="viewResponsesButton" onAction="#handleViewResponses" text="View Responses" />
+    <TextArea fx:id="responsesArea" editable="false" promptText="Selected survey responses will appear here" wrapText="true" />
+    <Pane fx:id="chartPane" prefHeight="200" prefWidth="400" style="-fx-border-color: black;" />
+    <Button fx:id="backButton" onAction="#handleBack" style="-fx-pref-width: 100;" text="Back" />
+</VBox>

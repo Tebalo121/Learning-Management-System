@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="486.0" prefWidth="819.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.learningmanagementsystem.InstructorGradeSubmissionsController">
+    <children>
+        <TableView fx:id="submissionTable" layoutX="25.0" layoutY="50" prefHeight="300" prefWidth="780.0">
+            <columns>
+                <TableColumn fx:id="studentNameColumn" prefWidth="187.99996376037598" text="Student Name" />
+                <TableColumn fx:id="assignmentTitleColumn" prefWidth="196.79998779296875" text="Assignment Title" />
+                <TableColumn fx:id="submissionDateColumn" prefWidth="220.79995727539062" text="Submission Date" />
+                <TableColumn fx:id="gradeColumn" prefWidth="172.79998779296875" text="Grade" />
+            </columns>
+        </TableView>
+
+        <TextField fx:id="gradeField" layoutX="50" layoutY="400" prefHeight="26.0" prefWidth="167.0" promptText="Enter Grade" />
+        <Button layoutX="229.0" layoutY="400.0" onAction="#handleGradeSubmission" text="Grade Submission" />
+        <Button fx:id="viewSubmissionButton" layoutX="360.0" layoutY="400.0" onAction="#handleViewSubmission" text="View Submission" />
+        <Button fx:id="backButton" layoutX="491.0" layoutY="400.0" onAction="#handleBack" text="Back to Home" />
+    </children>
+</AnchorPane>

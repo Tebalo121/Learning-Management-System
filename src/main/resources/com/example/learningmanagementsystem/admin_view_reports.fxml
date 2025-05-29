@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.2"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.learningmanagementsystem.AdminViewReportsController"
+      fx:id="chartContainer"
+      alignment="CENTER"
+      spacing="20"
+      prefWidth="800" prefHeight="600">
+
+    <!-- FIXED: Set padding using Insets element -->
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Reports Dashboard" style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+
+    <!-- Charts will be added dynamically from the controller -->
+
+    <Button text="Back" onAction="#handleBack"/>
+</VBox>

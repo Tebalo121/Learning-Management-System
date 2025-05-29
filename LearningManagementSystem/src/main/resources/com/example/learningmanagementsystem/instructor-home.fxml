@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.learningmanagementsystem.InstructorHomeController">
+
+    <top>
+        <VBox>
+            <MenuBar fx:id="menuBar" useSystemMenuBar="false" visible="true" managed="true">
+                <Menu text="File">
+                    <MenuItem text="View Student Progress" onAction="#handleViewStudentProgress" />
+                    <MenuItem text="Exit" onAction="#handleExit" />
+                </Menu>
+                <Menu text="Help">
+                    <MenuItem text="Help Contents" onAction="#handleHelpContents" />
+                    <MenuItem text="About" onAction="#handleAbout" />
+                </Menu>
+            </MenuBar>
+            <ToolBar>
+                <Button fx:id="toggleMenuButton" text="Hide Menu" onAction="#handleToggleMenu" />
+                <Label fx:id="welcomeLabel" text="Welcome Instructor" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button text="Logout" onAction="#handleLogout"/>
+            </ToolBar>
+        </VBox>
+    </top>
+
+    <right>
+        <StackPane>
+            <!-- Banana-shaped background -->
+            <Region style="
+                -fx-background-color: #f4f4f4;
+                -fx-background-radius: 0 0 0 100;
+                -fx-border-color: #cccccc;
+                -fx-border-width: 2;
+                -fx-border-radius: 0 0 0 100;
+                -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.5, -5, 0);
+            " minWidth="250" minHeight="600"/>
+
+            <!-- Navigation content with curved alignment -->
+            <VBox fx:id="navBar" alignment="CENTER_LEFT" spacing="15" style="-fx-padding: 20 20 20 40;">
+                <Label text="Instructor Dashboard" style="
+                    -fx-font-size: 22;
+                    -fx-font-weight: bold;
+                    -fx-text-fill: #333333;
+                    -fx-padding: 10 0 20 20;
+                    -fx-rotate: -5;
+                " />
+
+                <VBox spacing="15" style="-fx-padding: 0 0 0 20;">
+                    <Button text="Manage Courses" onAction="#handleManageCourses" style="
+                        -fx-pref-width: 200;
+                        -fx-background-radius: 10 0 10 10;
+                        -fx-border-radius: 10 0 10 10;
+                        -fx-background-color: #ffffff;
+                        -fx-border-color: #cccccc;
+                        -fx-border-width: 1;
+                        -fx-padding: 10;
+                        -fx-font-size: 14;
+                        -fx-translate-x: -10;
+                    " />
+                    <Button text="Create Assignments" onAction="#handleCreateAssignments" style="
+                        -fx-pref-width: 200;
+                        -fx-background-radius: 10 0 10 10;
+                        -fx-border-radius: 10 0 10 10;
+                        -fx-background-color: #ffffff;
+                        -fx-border-color: #cccccc;
+                        -fx-border-width: 1;
+                        -fx-padding: 10;
+                        -fx-font-size: 14;
+                        -fx-translate-x: -5;
+                    " />
+                    <Button text="Grade Submissions" onAction="#handleGradeSubmissions" style="
+                        -fx-pref-width: 200;
+                        -fx-background-radius: 10 0 10 10;
+                        -fx-border-radius: 10 0 10 10;
+                        -fx-background-color: #ffffff;
+                        -fx-border-color: #cccccc;
+                        -fx-border-width: 1;
+                        -fx-padding: 10;
+                        -fx-font-size: 14;
+                    " />
+                    <Button text="Post Announcements" onAction="#handlePostAnnouncements" style="
+                        -fx-pref-width: 200;
+                        -fx-background-radius: 10 0 10 10;
+                        -fx-border-radius: 10 0 10 10;
+                        -fx-background-color: #ffffff;
+                        -fx-border-color: #cccccc;
+                        -fx-border-width: 1;
+                        -fx-padding: 10;
+                        -fx-font-size: 14;
+                        -fx-translate-x: 5;
+                    " />
+                    <Button text="Conduct Surveys" onAction="#handleConductSurveys" style="
+                        -fx-pref-width: 200;
+                        -fx-background-radius: 10 0 10 10;
+                        -fx-border-radius: 10 0 10 10;
+                        -fx-background-color: #ffffff;
+                        -fx-border-color: #cccccc;
+                        -fx-border-width: 1;
+                        -fx-padding: 10;
+                        -fx-font-size: 14;
+                        -fx-translate-x: 10;
+                    " />
+                    <Button text="Set Discussion Topics" onAction="#handleSetDiscussionTopics" style="
+                        -fx-pref-width: 200;
+                        -fx-background-radius: 10 0 10 10;
+                        -fx-border-radius: 10 0 10 10;
+                        -fx-background-color: #ffffff;
+                        -fx-border-color: #cccccc;
+                        -fx-border-width: 1;
+                        -fx-padding: 10;
+                        -fx-font-size: 14;
+                        -fx-translate-x: 15;
+                    " />
+                    <Button text="Track Progress" onAction="#handleTrackProgress" style="
+                        -fx-pref-width: 200;
+                        -fx-background-radius: 10 0 10 10;
+                        -fx-border-radius: 10 0 10 10;
+                        -fx-background-color: #ffffff;
+                        -fx-border-color: #cccccc;
+                        -fx-border-width: 1;
+                        -fx-padding: 10;
+                        -fx-font-size: 14;
+                        -fx-translate-x: 20;
+                    " />
+                </VBox>
+            </VBox>
+        </StackPane>
+    </right>
+
+    <center>
+        <VBox alignment="CENTER" spacing="10" style="-fx-padding: 20;">
+            <Label text="Main Content Area" style="-fx-font-size: 18; -fx-font-weight: bold;" />
+        </VBox>
+    </center>
+</BorderPane>

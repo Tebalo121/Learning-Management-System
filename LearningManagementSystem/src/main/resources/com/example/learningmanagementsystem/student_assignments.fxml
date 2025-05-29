@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.learningmanagementsystem.StudentAssignmentsController">
+
+    <top>
+        <ToolBar>
+            <Label fx:id="welcomeLabel" text="My Assignments" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="Back" onAction="#handleBack"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <VBox spacing="10" alignment="CENTER">
+            <padding>
+                <Insets top="10" bottom="10" left="10" right="10"/>
+            </padding>
+
+            <TableView fx:id="assignmentTable" prefWidth="600">
+                <columns>
+                    <TableColumn fx:id="colTitle" text="Title" prefWidth="200"/>
+                    <TableColumn fx:id="colDueDate" text="Due Date" prefWidth="150"/>
+                    <TableColumn fx:id="colStatus" text="Status" prefWidth="150"/>
+                </columns>
+            </TableView>
+
+            <Button text="View Details" onAction="#handleViewDetails"/>
+        </VBox>
+    </center>
+</BorderPane>

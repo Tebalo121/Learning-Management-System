@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.learningmanagementsystem.RegistrationController">
+
+    <GridPane alignment="CENTER" hgap="10" vgap="10"
+              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+        <Text text="User Registration" style="-fx-font-size: 24; -fx-font-weight: bold;"
+              GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0"/>
+
+        <!-- Form Fields -->
+        <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Label text="Full Name:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextField fx:id="fullNameField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+        <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+        <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+        <Label text="Role:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+        <ComboBox fx:id="roleComboBox" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+        <Button fx:id="registerButton" text="Register"
+                onAction="#handleRegister"
+                GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+    </GridPane>
+</AnchorPane>

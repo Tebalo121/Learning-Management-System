@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:controller="com.example.learningmanagementsystem.InstructorTrackProgressController"
+      xmlns:fx="http://javafx.com/fxml" spacing="10" alignment="TOP_CENTER" style="-fx-background-color: #f4f4f4;">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    <Label fx:id="welcomeLabel" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Track Student Progress"/>
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Filter by Student/Course:"/>
+        <TextField fx:id="filterField" promptText="Enter name to filter" prefWidth="200" onKeyReleased="#handleFilter"/>
+    </HBox>
+    <TableView fx:id="progressTable" prefHeight="400">
+        <columns>
+            <TableColumn fx:id="studentColumn" text="Student" prefWidth="150"/>
+            <TableColumn fx:id="courseColumn" text="Course" prefWidth="150"/>
+            <TableColumn fx:id="test1Column" text="Test 1" prefWidth="80"/>
+            <TableColumn fx:id="midtermColumn" text="Midterm" prefWidth="80"/>
+            <TableColumn fx:id="testAssignmentColumn" text="Test/Assignment" prefWidth="80"/>
+            <TableColumn fx:id="finalExamColumn" text="Final Exam" prefWidth="80"/>
+            <TableColumn fx:id="progressColumn" text="Progress (%)" prefWidth="80"/>
+            <TableColumn fx:id="statusColumn" text="Status" prefWidth="80"/>
+        </columns>
+    </TableView>
+    <HBox spacing="10" alignment="CENTER">
+        <VBox spacing="5">
+            <Label text="Test 1:"/>
+            <TextField fx:id="test1Field" promptText="0-100"/>
+        </VBox>
+        <VBox spacing="5">
+            <Label text="Midterm:"/>
+            <TextField fx:id="midtermField" promptText="0-100"/>
+        </VBox>
+        <VBox spacing="5">
+            <Label text="Test/Assignment:"/>
+            <TextField fx:id="testAssignmentField" promptText="0-100"/>
+        </VBox>
+        <VBox spacing="5">
+            <Label text="Final Exam:"/>
+            <TextField fx:id="finalExamField" promptText="0-100"/>
+        </VBox>
+    </HBox>
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="saveMarksButton" text="Save Marks" onAction="#handleSaveMarks"/>
+        <Button fx:id="backButton" text="Back to Dashboard" onAction="#handleBack"/>
+    </HBox>
+</VBox>

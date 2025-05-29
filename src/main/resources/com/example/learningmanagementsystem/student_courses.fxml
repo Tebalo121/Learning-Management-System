@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.learningmanagementsystem.StudentCoursesController">
+
+    <top>
+        <ToolBar>
+            <Label fx:id="welcomeLabel" text="My Courses" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="Back" onAction="#handleBack"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <ListView fx:id="courseListView" prefWidth="400" prefHeight="300" />
+    </center>
+</BorderPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TextField?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.learningmanagementsystem.InstructorManageCoursesController">
+    <children>
+        <TableView fx:id="courseTable" layoutX="50" layoutY="50" prefHeight="300" prefWidth="600">
+            <columns>
+                <TableColumn text="Course Name" fx:id="courseNameColumn" />
+                <TableColumn text="Instructor" fx:id="instructorColumn" />
+                <TableColumn text="Credits" fx:id="creditsColumn" />
+            </columns>
+        </TableView>
+
+        <Button text="Add Course" layoutX="50" layoutY="400" onAction="#handleAddCourse" />
+        <Button text="Edit Course" layoutX="150" layoutY="400" onAction="#handleEditCourse" />
+        <Button text="Delete Course" layoutX="250" layoutY="400" onAction="#handleDeleteCourse" />
+
+        <TextField fx:id="searchField" promptText="Search courses..." layoutX="350" layoutY="400" />
+    </children>
+</AnchorPane>

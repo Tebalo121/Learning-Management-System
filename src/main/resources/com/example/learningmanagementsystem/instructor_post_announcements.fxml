@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.learningmanagementsystem.InstructorPostAnnouncementsController">
+
+    <children>
+        <TextField fx:id="announcementTitleField" promptText="Announcement Title" layoutX="50" layoutY="30" prefWidth="400"/>
+        <TextArea fx:id="announcementTextField" promptText="Announcement Text" layoutX="50" layoutY="70" prefWidth="600" prefHeight="100"/>
+        <Button text="Post Announcement" layoutX="50" layoutY="180" onAction="#handlePostAnnouncement"/>
+        <Button text="Cancel" layoutX="170" layoutY="180" onAction="#handleCancel"/>
+
+        <TableView fx:id="announcementTable" layoutX="50" layoutY="230" prefWidth="700" prefHeight="200">
+            <columns>
+                <TableColumn fx:id="titleColumn" text="Title" prefWidth="200"/>
+                <TableColumn fx:id="messageColumn" text="Message" prefWidth="300"/>
+                <TableColumn fx:id="dateColumn" text="Posted At" prefWidth="200"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

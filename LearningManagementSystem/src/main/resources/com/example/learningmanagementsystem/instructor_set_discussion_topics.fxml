@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.2" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.learningmanagementsystem.InstructorSetDiscussionTopicsController"
+      alignment="CENTER" spacing="15" style="-fx-padding: 20;">
+    <Label text="Set Discussion Topics" style="-fx-font-size: 18; -fx-font-weight: bold;" />
+    <TextField fx:id="topicTitleField" promptText="Topic Title" />
+    <TextArea fx:id="topicDescriptionField" promptText="Topic Description" wrapText="true" />
+    <Button fx:id="addTopicButton" text="Add Topic" onAction="#handleAddTopic" />
+    <TableView fx:id="topicsTable">
+        <columns>
+            <TableColumn fx:id="titleColumn" text="Title" prefWidth="200" />
+            <TableColumn fx:id="descriptionColumn" text="Description" prefWidth="300" />
+            <TableColumn fx:id="createdAtColumn" text="Created At" prefWidth="150" />
+            <TableColumn fx:id="replyCountColumn" text="Replies" prefWidth="100" />
+        </columns>
+    </TableView>
+    <Button fx:id="viewRepliesButton" text="View Replies" onAction="#handleViewReplies" />
+    <TextArea fx:id="repliesArea" promptText="Selected topic replies will appear here" wrapText="true" editable="false" />
+    <Button fx:id="backButton" text="Back" onAction="#handleBack" style="-fx-pref-width: 100;" />
+</VBox>

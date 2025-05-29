@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="532.0" prefWidth="868.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.learningmanagementsystem.InstructorPostAnnouncementsController">
+    <children>
+        <TextField fx:id="announcementTitleField" layoutX="50" layoutY="30" prefWidth="400" promptText="Announcement Title" />
+        <TextArea fx:id="announcementTextField" layoutX="50" layoutY="70" prefHeight="100" prefWidth="600" promptText="Announcement Text" />
+        <Button fx:id="postAnnouncementButton" layoutX="50" layoutY="180" onAction="#handlePostAnnouncement" text="Post Announcement" />
+        <Button fx:id="cancelButton" layoutX="189.0" layoutY="180.0" onAction="#handleCancel" text="Cancel" />
+        <Button fx:id="backButton" layoutX="260.0" layoutY="180.0" onAction="#handleBack" text="Back to Home" />
+        <TableView fx:id="announcementTable" layoutX="50" layoutY="230" prefHeight="200" prefWidth="700">
+            <columns>
+                <TableColumn fx:id="titleColumn" prefWidth="200" text="Title" />
+                <TableColumn fx:id="messageColumn" prefWidth="300" text="Message" />
+                <TableColumn fx:id="dateColumn" prefWidth="200" text="Posted At" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

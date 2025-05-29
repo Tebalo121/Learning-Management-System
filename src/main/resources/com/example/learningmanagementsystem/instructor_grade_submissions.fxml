@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TextField?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.learningmanagementsystem.InstructorGradeSubmissionsController">
+    <children>
+        <TableView fx:id="submissionTable" layoutX="50" layoutY="50" prefHeight="300" prefWidth="600">
+            <columns>
+                <TableColumn text="Student Name" fx:id="studentNameColumn" />
+                <TableColumn text="Assignment Title" fx:id="assignmentTitleColumn" />
+                <TableColumn text="Submission Date" fx:id="submissionDateColumn" />
+                <TableColumn text="Grade" fx:id="gradeColumn" />
+            </columns>
+        </TableView>
+
+        <TextField fx:id="gradeField" promptText="Enter Grade" layoutX="50" layoutY="400" />
+        <Button text="Grade Submission" layoutX="150" layoutY="400" onAction="#handleGradeSubmission" />
+        <Button text="View Submission" layoutX="250" layoutY="400" onAction="#handleViewSubmission" />
+    </children>
+</AnchorPane>
